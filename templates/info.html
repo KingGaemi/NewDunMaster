@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <script>
-        const equipmentsJSON = '{{equipmentsJSON| tojson | safe}}';
+        
         const characterId = '{{equipmentsJSON.characterId}}';
         const serverId =  '{{serverId}}';
     </script>
@@ -47,7 +47,7 @@
                             <p class="text-center mb-2">{{equipment['itemType']}}: {{equipment['itemName']}} {{equipment['reinforce']}}+</p>
                             <div class="equipmentImg">
                                 <img src="https://img-api.neople.co.kr/df/items/{{equipment['itemId']}}" alt="Item Image" 
-                                     class="w-full rounded-md">
+                                     class="w-12 mb-12">
                                 <div class="tooltip absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div id="tooltip_{{ loop.index }}"></div>
                                 </div>

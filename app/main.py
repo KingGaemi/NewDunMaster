@@ -65,15 +65,16 @@ async def info(request: Request, characterId: str = Query(...), serverId: str = 
 
 
 
-@app.get("/info/{character_id}/{server_id}",  response_class=HTMLResponse)
-async def get_equipments(characterId: str = Query(...), serverId: str = Query(...)):
-    equipmentUrl = f"https://api.neople.co.kr/df/servers/{serverId}/characters/{characterId}?apikey={API_KEY}"
+@app.get("/info/{characterId}/{serverId}")
+async def get_equipments_json(characterId: str, serverId: str):
+    equipmentUrl = f"https://api.neople.co.kr/df/servers/{serverId}/characters/{characterId}/equip/equipment?apikey={API_KEY}"
     response = requests.get(equipmentUrl)
-    equipmentsJSON = response.json()
-
-    return JSONResponse(content=equipmentsJSON)
-
-
+    equipJSON = response.json()
+    if response.status_code == 200:
+        return JSONResponse(content=equipJSON)  # JSONResponse 사용
+    else:
+        raise HTTPException(status_code=404, detail="No character data found")
+    
 
 @app.post("/users/create", status_code=status.HTTP_201_CREATED)
 async def create_user(user: models.UserBase, db : db_dependency):

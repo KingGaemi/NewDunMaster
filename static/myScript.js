@@ -1,13 +1,5 @@
 // equipmentsJSON is defined in the HTML template
 
-
-fetch(`/info/${characterId}/${serverId}`)
-    .then(response => response.json())
-    .then(data => {
-        // 받아온 equipmentsJSON 데이터 (data) 처리
-        generateEquipmentsTooltip(data); 
-    });
-
 function getLastProperty(obj) {
   const keys = Object.keys(obj);
   return obj[keys[keys.length - 1]];
@@ -26,14 +18,19 @@ function processJson(json) {
   json = json.replace(/None/g, 'null');
   json = json.replace(/True/g, 'true');
   json = json.replace(/False/g, 'false');
+  console.log(json);
   return JSON.parse(json);
 }
 
-function generateEquipmentsTooltip() {
-  for (const index in equipmentsJSON.equipment) {
-    const equipment = equipmentsJSON.equipment[index];
-    const targetTooltip = document.getElementById('tooltip_' + (parseInt(index) + 1));
 
+
+function generateEquipmentsTooltip(equipmentsJSON) {
+  for (const index in equipmentsJSON['equipment']) {
+    const equipment = equipmentsJSON['equipment'][index];
+    const targetTooltip = document.getElementById('tooltip_' + (parseInt(index) + 1));
+    console.log(equipment);
+    console.log(index);
+    console.log(targetTooltip);
     if (!targetTooltip) {
       continue; // 툴팁 요소가 없으면 다음 반복으로 넘어감
     }
@@ -61,6 +58,8 @@ function generateEquipmentsTooltip() {
     } else {
       targetTooltip.innerHTML += '<span>Default</span><span>Default</span>';
     }
+    console.log(targetTooltip.innerHTML);
+    console.log(optionString);
   }
 }
 
@@ -79,7 +78,24 @@ for (const index in infoContents) {
   }
 }
 
+window.addEventListener('load', generateEquipmentsTooltip);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const characterId = urlParams.get('characterId');
+  const serverId = urlParams.get('serverId');
 
 
+  const url = `/info/${characterId}/${serverId}`;
 
-window.addEventListener('load', generateEquipmentsTooltip); 
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          generateEquipmentsTooltip(data);
+      })
+      .catch(error => {
+          console.error('Error fetching equipments data:', error);
+      });
+
+  // ... 나머지 코드 ...
+});
