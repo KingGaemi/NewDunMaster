@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Error fetching equipments data:', error);
       });
 
-  // ... 나머지 코드 ...
 });
 
 
