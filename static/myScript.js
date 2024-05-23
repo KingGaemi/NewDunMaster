@@ -1,5 +1,16 @@
 // equipmentsJSON is defined in the HTML template
 
+// const characterId = '{{equipmentsJSON.characterId}}';
+// const characterName = '{{equipmentsJSON.characterName}}';
+// const serverId = '{{serverId}}';
+// const adventureName = '{{equipmentsJSON.adventureName}}';
+// const jobGrowName = '{{equipmentsJSON.jobGrowName}}';
+// const jobName = '{{equipmentsJSON.jobName}}';
+// const guildName = '{{equipmentsJSON.guildName}}';
+// const fame = '{{fame}}';
+
+
+
 function getLastProperty(obj) {
   const keys = Object.keys(obj);
   return obj[keys[keys.length - 1]];
@@ -23,6 +34,24 @@ function processJson(json) {
 }
 
 
+function sendData() {
+  const url = "/users/create";
+  const bodyData = {"name": characterName , "charId": characterId,
+                    "serverId": serverId, "adventureName": adventureName,
+                    "jobGrowName": jobGrowName, "jobName": jobName,
+                    "guildName": guildName, "fame": fame}; // 원하는 body 데이터
+  console.log(bodyData);
+  fetch(url, {
+      method: 'POST', // 또는 'GET'
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(bodyData)
+  })
+  .then(response => {
+    console.log(response);
+  });
+}
 
 function generateEquipmentsTooltip(equipmentsJSON) {
   for (const index in equipmentsJSON['equipment']) {
@@ -59,7 +88,6 @@ function generateEquipmentsTooltip(equipmentsJSON) {
       targetTooltip.innerHTML += '<span>Default</span><span>Default</span>';
     }
     console.log(targetTooltip.innerHTML);
-    console.log(optionString);
   }
 }
 
@@ -77,8 +105,6 @@ for (const index in infoContents) {
     });
   }
 }
-
-window.addEventListener('load', generateEquipmentsTooltip);
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -99,3 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ... 나머지 코드 ...
 });
+
+
+
+
+
+

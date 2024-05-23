@@ -4,61 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
+
+    {% include "nav.html" %}
     <script>
-        
         const characterId = '{{equipmentsJSON.characterId}}';
-        const serverId =  '{{serverId}}';
+        const characterName = '{{equipmentsJSON.characterName}}';
+        const serverId = '{{serverId}}';
+        const adventureName = '{{equipmentsJSON.adventureName}}';
+        const jobGrowName = '{{equipmentsJSON.jobGrowName}}';
+        const jobName = '{{equipmentsJSON.jobName}}';
+        const guildName = '{{equipmentsJSON.guildName}}';
+        const fame = '{{fame}}';
+
     </script>
     <script src="{{ url_for('static', path='/myScript.js') }}"></script>
-</head>
-<body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-4">
+    <style>
 
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
-            <h1 class="text-2xl font-bold mb-2">{{equipmentsJSON['characterName']}} ({{servers[equipmentsJSON['serverId']]}})</h1>
-            <p class="text-gray-600 text-sm">
+        .tooltip-custom {
+            display: none;
+            position: absolute;
+            background-color: #343a40;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            width: 300px;
+        }
+
+        .equipmentImg:hover .tooltip-custom {
+            display: block;
+        }
+    </style>
+</head>
+<body class="container p-4">
+    <div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+            <h1 class="h4 font-weight-bold mb-2">{{equipmentsJSON['characterName']}} ({{servers[equipmentsJSON['serverId']]}})</h1>
+            <p class="text-muted">
                 레벨: {{equipmentsJSON['level']}} | 
                 직업: {{equipmentsJSON['jobGrowName']}} | 
                 길드: {{equipmentsJSON['guildName']}}
+                명성: {{fame}}
             </p>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md mb-4">
-            <div class="flex justify-between items-center mb-4">
-                <label for="equipmentsRadio" class="mr-2">장비</label>
-                <input type="radio" id="equipmentsRadio" name="infoRadio" value="equipments" checked>
+        <div>
 
-                <label for="avatarRadio" class="mr-2">아바타</label>
-                <input type="radio" id="avatarRadio" name="infoRadio" value="avatar">
+                <button type="button" onclick="sendData()" class="btn btn-success">Success</button>
 
-                <label for="creatureRadio" class="mr-2">능력치</label>
-                <input type="radio" id="creatureRadio" name="infoRadio" value="creature">
 
-                <label for="traitRadio" class="mr-2">장비 특성</label>
-                <input type="radio" id="traitRadio" name="infoRadio" value="trait">
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+            <div class="d-flex justify-content-between mb-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="equipmentsRadio" name="infoRadio" value="equipments" checked>
+                    <label class="form-check-label" for="equipmentsRadio">장비</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="avatarRadio" name="infoRadio" value="avatar">
+                    <label class="form-check-label" for="avatarRadio">아바타</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="creatureRadio" name="infoRadio" value="creature">
+                    <label class="form-check-label" for="creatureRadio">능력치</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="traitRadio" name="infoRadio" value="trait">
+                    <label class="form-check-label" for="traitRadio">장비 특성</label>
+                </div>
             </div>
 
             <div id="content1" class="content">
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="d-flex flex-column">
                     {% for equipment in equipmentsJSON['equipment'] %}
-                        <div class="equipments" id="item_{{ loop.index }}">
+                        <div class="equipments position-relative mb-4" id="item_{{ loop.index }}">
                             <p class="text-center mb-2">{{equipment['itemType']}}: {{equipment['itemName']}} {{equipment['reinforce']}}+</p>
-                            <div class="equipmentImg">
-                                <img src="https://img-api.neople.co.kr/df/items/{{equipment['itemId']}}" alt="Item Image" 
-                                     class="w-12 mb-12">
-                                <div class="tooltip absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div id="tooltip_{{ loop.index }}"></div>
+                            <div class="equipmentImg position-relative d-inline-block">
+                                <img src="https://img-api.neople.co.kr/df/items/{{equipment['itemId']}}" alt="Item Image" class="rounded mx-auto d-block">
+                                <div class="tooltip-custom" style="bottom: 100%; left: 100%; transform: translateX(-50%); margin-bottom: 5%; margin-top: 5%;">
+                                    <div class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right" id ="tooltip_{{ loop.index }}">
+                                      <span><br></span>
+                                      <span><br></span>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     {% endfor %}
                 </div>
             </div>
-
-            </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

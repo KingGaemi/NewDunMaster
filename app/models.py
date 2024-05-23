@@ -1,18 +1,9 @@
 from pydantic import BaseModel, Field
 from pydantic.networks import HttpUrl
 
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, Boolean
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Boolean, BigInteger
 from app.database import Base
 
-
-
-class Blog(Base):
-    __tablename__ = 'blogs'
-
-    id = Column(Integer, primary_key=True, index=True)
-    title = Column(String(50), unique=True)
-    body = Column(String(50))
-    user_id = Column(Integer, ForeignKey('users.id'))
 
 
 class User(Base):
@@ -20,10 +11,17 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(50))
-    age = Column(Integer)
-    email = Column(String(50), unique=True)
-    password = Column(String(50))
-    is_active = Column(Boolean, default=True)
+    charId = Column(String(50));
+    serverId = Column(String(50));
+    adventureName = Column(String(50));
+    guildName = Column(String(50));
+    jobName: str = Column(String(50));
+    jobGrowName = Column(String(50));
+    fame = Column(Integer);
+    deal = Column(BigInteger);
+    buff = Column(Integer)
+
+
 
 
 class Image(BaseModel):
@@ -31,11 +29,18 @@ class Image(BaseModel):
     name: str
 
 class UserBase(BaseModel):
-    id: int
     name: str
-    age: int
-    email: str
-    password: str
+    charId: str
+    serverId: str
+    adventureName: str
+    guildName: str
+    jobName: str
+    jobGrowName: str
+    fame: int
+    deal: int
+    buff: int
+
+    
 
 
 class Item(BaseModel):
