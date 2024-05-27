@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<script>
+    console.log('{{characterList}}');
+</script>
+<body class="bg-gray-100 min-h-screen">
+    <div class="w-full flex justify-center mt-8">
+        <a href="/" class="w-64 mt-8 flex flex-col items-center justify-center "> 
+            <img src="{{ url_for('static', path='/logo.png') }}" alt="로고" class="w-48 mb-8 "> 
+
+        </a>
+    </div>
+    </header>
+    <div class="container mx-auto p-8">
+        <form method="get" action="/searchCharacter" class="flex flex-col items-center bg-white p-8 rounded shadow-md">
+            <div>
+            <input type="text" id="CharacterName" name="characterName" placeholder="캐릭터명 입력" class="border rounded px-5 py-2 mb-4 w-96">
+                <select id="serverId" name="serverId"  class="border rounded px-2 py-2 mb-4 w-32">
+                    <option value="all">전체</option>
+                    {% for server_id, server_name in servers.items() %}
+                        <option value="{{ server_id }}">{{ server_name }}</option>
+                    {% endfor %}
+                </select>
+            <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+             </div>
+        </form>
+        <h1 class="text-3xl font-bold mb-4">검색 결과</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {% for character in characterList['rows'] %}
+                <div class="characters bg-white rounded-lg shadow-md p-4 cursor-pointer hover:bg-gray-200" 
+                     onclick="redirectToNextPage(`{{character['characterId']}}&serverId={{character['serverId']}}`)">
+                    <img src="https://img-api.neople.co.kr/df/servers/{{ character['serverId'] }}/characters/{{ character['characterId'] }}?zoom=1" 
+                         alt="CharacterImage" class="w-full h-80 object-cover rounded-t-lg">
+                    <div class="p-4">
+                        <p class="text-sm"><span class="font-semibold">서버:</span> {{servers[character['serverId']]}}</p>
+                        <p class="text-lg font-bold">{{character['characterName']}}</p>
+                        <p class="text-sm"><span class="font-semibold">레벨:</span> {{ character['level'] }}</p>
+                        <p class="text-sm"><span class="font-semibold">직업:</span> {{ character['jobGrowName'] }}</p>
+                        <p class="text-sm"><span class="font-semibold">명성:</span> {{ character['fame'] }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        function redirectToNextPage(characterInfo) {
+            var url = "/info?characterId=" + characterInfo;
+            console.log(url);
+            console.log('redirecting to next page');
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

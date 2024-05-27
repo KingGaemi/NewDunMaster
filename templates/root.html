@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <img src="{{ url_for('static', path='/logo.png') }}" alt="로고" class="w-48 mb-48">  <form method="get" action="/searchCharacter" class="flex flex-col items-center bg-white p-8 rounded shadow-md">
+
+        <input type="text" id="CharacterName" name="characterName" placeholder="캐릭터명 입력" class="border rounded px-3 py-2 mb-4 w-64">
+        <select id="serverId" name="serverId"  class="border rounded px-3 py-2 mb-4 w-64">
+            <option value="all">전체</option>
+            {% for server_id, server_name in servers.items() %}
+                <option value="{{ server_id }}">{{ server_name }}</option>
+            {% endfor %}
+        </select>
+        <div>
+        <input type="submit" id="characterSearchButton" value="캐릭터 검색" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >
+        <input type="submit" id="adventureSearchButton" value="모험단 검색" class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" >
+        </div>
+    </form>
+</body>
+
+<script>
+    const characterSearchButton = document.getElementById('characterSearchButton');
+    const adventureSearchButton = document.getElementById('adventureSearchButton');
+    const searchForm = document.querySelector('form');
+    const characterNameInput = document.getElementById('CharacterName');
+    
+    characterSearchButton.addEventListener('click', () => {
+        searchForm.action = "/searchCharacter"; // 캐릭터 검색 경로
+        searchForm.submit();
+    });
+    
+    adventureSearchButton.addEventListener('click', () => {
+        searchForm.action = "/searchCharacter"; // 모험단 검색 경로
+        characterNameInput.name = "adventureName"; // 입력 필드 이름 변경
+        searchForm.submit();
+    });
+    </script>
+</html>

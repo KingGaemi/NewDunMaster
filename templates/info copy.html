@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- <style>
+        /* 아이콘에 대한 추가 정보를 표시할 스타일 */
+        .equipments {
+            position: relative;
+        }
+        .equipmentImg {
+            position: relative; /* 부모 요소로부터의 상대적 위치 */
+            display: inline-block; /* 인라인 요소로 표시되도록 설정 */
+        }
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 1);
+            border: 1px solid #000000;
+            padding: 10px;
+            border-radius: 5px;
+            display: none; /* 기본적으로 숨김 */
+            color: rgba(255, 255, 255, 1);
+            z-index: 100; /* 툴팁을 다른 요소보다 앞에 표시 */
+            
+        }
+        .equipmentImg:hover + .tooltip {
+            display: block;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style> -->
+
+    <script>
+        const equipmentsJSON = '{{ equipmentsJSON | tojson }}';
+    </script>
+    <script src="{{ url_for('static', path='/myScript.js') }}"></script>
+
+</head>
+<body >
+    <h1>{{equipmentsJSON['characterName']}}  ({{servers[equipmentsJSON['serverId']]}})</h1>
+    <p>레벨: {{equipmentsJSON['level']}}</p>
+    <p>직업: {{equipmentsJSON['jobGrowName']}}</p>
+    <p>길드: {{equipmentsJSON['guildName']}}</p>
+
+
+    <input type="radio" id="equipmentsRadio" name="infoRadio" value="equipments" checked>
+    <label for="equipmentsRadio">장비</label><br>
+    <input type="radio" id="avatarRadio" name="infoRadio" value="avatar">
+    <label for="avatarRadio">아바타</label><br>
+    <input type="radio" id="creatureRadio" name="infoRadio" value="creature">
+    <label for="creatureRadio">능력치</label><br>
+    <input type="radio" id="traitRadio" name="infoRadio" value="trait">
+    <label for="traitRadio">장비 특성</label><br>
+   
+    <div id="content1" class="content">
+        {% for equipment in equipmentsJSON['equipment'] %}
+            <div class="equipments" id="item_{{ loop.index }}">
+                <p>{{equipment['itemType']}}: {{equipment['itemName']}} {{equipment['reinforce']}}+</p>
+                <div class="equipmentImg">
+                    <img src="https://img-api.neople.co.kr/df/items/{{equipment['itemId']}}" alt="Item Image">
+                </div>
+                <div class="tooltip" id ="tooltip_{{ loop.index }}">
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+<!-- 
+    <div id="content2" class="content" style="display:none;">
+        {% for avatar in avatarJSON['avatar'] %}
+            <div>
+                {{avatar["slotName"]}}
+                <img src="https://img-api.neople.co.kr/df/items/{{avatar['itemId']}}" alt="Item Image">
+                {{avatar["itemName"]}}
+                {{avatar["optionAbility"]}}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="content3" class="content" style="display:none;">
+        능력치
+        {% for sataus in statusJSON['status'] %}
+            <div>
+                {{sataus["name"]}}
+                {{sataus["value"]}}
+            </div>
+        {% endfor %}
+
+    </div>
+    
+    <div id="content4" class="content" style="display:none;">
+        장비 특성
+        {% for traitOption in traitJSON['equipmentTrait']['options'] %}
+            <div>
+                {{traitOption["name"]}}
+                {{traitOption["explain"]}}
+            </div>
+        {% endfor %}
+
+    </div> -->
+
+    
+</body>
+</html>

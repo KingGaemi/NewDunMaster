@@ -1,0 +1,8 @@
+sqlAlchemy
+pymysql
+uvicorn
+fastapi
+requests
+gunicorn
+cryptography
+pydantic

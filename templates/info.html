@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    {% include "nav.html" %}
+    <script>
+        const serverId = '{{serverId}}';
+        const characterId = '{{equipmentsJSON.characterId}}';
+        const characterName = '{{equipmentsJSON.characterName}}';
+        const level = '{{equipmentsJSON.level}}';
+        const jobId = '{{equipmentsJSON.jobId}}';
+        const jobGrowId = '{{equipmentsJSON.jobGrowId}}';
+        const jobName = '{{equipmentsJSON.jobName}}';
+        const jobGrowName = '{{equipmentsJSON.jobGrowName}}';
+        const fame = '{{fame}}';
+        const adventureName = '{{equipmentsJSON.adventureName}}';
+        const guildName = '{{equipmentsJSON.guildName}}';
+        const deal = 0;
+        const buff = 0;
+
+    
+    </script>
+    <script src="{{ url_for('static', path='/myScript.js') }}"></script>
+    <style>
+
+        .tooltip-custom {
+            display: none;
+            position: absolute;
+            background-color: #343a40;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            width: 300px;
+        }
+
+        .equipmentImg:hover .tooltip-custom {
+            display: block;
+        }
+    </style>
+</head>
+<body class="container p-4">
+    <div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+            <h1 class="h4 font-weight-bold mb-2">{{equipmentsJSON['characterName']}} ({{servers[equipmentsJSON['serverId']]}})</h1>
+            <p class="text-muted">
+                레벨: {{equipmentsJSON['level']}} | 
+                직업: {{equipmentsJSON['jobGrowName']}} | 
+                길드: {{equipmentsJSON['guildName']}}
+                명성: {{fame}}
+            </p>
+        </div>
+
+        <div>
+
+                <button type="button" onclick="sendData()" class="btn btn-success">장비 저장</button>
+                <button type="button" onclick="sendStatus()" class="btn btn-success">스탯 저장</button>
+
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+            <div class="d-flex justify-content-between mb-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="equipmentsRadio" name="infoRadio" value="equipments" checked>
+                    <label class="form-check-label" for="equipmentsRadio">장비</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="avatarRadio" name="infoRadio" value="avatar">
+                    <label class="form-check-label" for="avatarRadio">아바타</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="creatureRadio" name="infoRadio" value="creature">
+                    <label class="form-check-label" for="creatureRadio">능력치</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="traitRadio" name="infoRadio" value="trait">
+                    <label class="form-check-label" for="traitRadio">장비 특성</label>
+                </div>
+            </div>
+
+            <div id="content1" class="content">
+                <div class="d-flex flex-column">
+                    {% for equipment in equipmentsJSON['equipment'] %}
+                        <div class="equipments position-relative mb-4" id="item_{{ loop.index }}">
+                            <p class="text-center mb-2">{{equipment['itemType']}}: {{equipment['itemName']}} {{equipment['reinforce']}}+</p>
+                            <div class="equipmentImg position-relative d-inline-block">
+                                <img src="https://img-api.neople.co.kr/df/items/{{equipment['itemId']}}" alt="Item Image" class="rounded mx-auto d-block">
+                                <div class="tooltip-custom" style="bottom: 100%; left: 100%; transform: translateX(-50%); margin-bottom: 5%; margin-top: 5%;">
+                                    <div class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right" id ="tooltip_{{ loop.index }}">
+                                      <span><br></span>
+                                      <span><br></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

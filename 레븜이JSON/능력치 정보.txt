@@ -1,0 +1,294 @@
+{
+  "characterId" : "95641d222fed92c8b80813904ccde5d7",
+  "characterName" : "레븜이",
+  "level" : 110,
+  "jobId" : "afdf3b989339de478e85b614d274d1ef",
+  "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+  "jobName" : "거너(남)",
+  "jobGrowName" : "眞 레인저",
+  "adventureName" : "개미는갬갬",
+  "guildId" : "63d35e9ffce0a4a0bee65e3c9f1e3c66",
+  "guildName" : "뻐킹던전맨",
+  "buff" : [ {
+    "name" : "모험단 버프",
+    "level" : 40,
+    "status" : [ {
+      "name" : "힘",
+      "value" : 290
+    }, {
+      "name" : "지능",
+      "value" : 290
+    }, {
+      "name" : "체력",
+      "value" : 290
+    }, {
+      "name" : "정신력",
+      "value" : 290
+    } ]
+  }, {
+    "name" : "무제한 길드능력치",
+    "status" : [ {
+      "name" : "힘",
+      "value" : 60
+    }, {
+      "name" : "지능",
+      "value" : 60
+    }, {
+      "name" : "체력",
+      "value" : 60
+    }, {
+      "name" : "정신력",
+      "value" : 60
+    } ]
+  }, {
+    "name" : "기간제 길드능력치",
+    "status" : [ {
+      "name" : "힘",
+      "value" : 40
+    }, {
+      "name" : "지능",
+      "value" : 40
+    }, {
+      "name" : "체력",
+      "value" : 40
+    }, {
+      "name" : "정신력",
+      "value" : 40
+    } ]
+  } ],
+  "status" : [ {
+    "name" : "HP",
+    "value" : 137726
+  }, {
+    "name" : "MP",
+    "value" : 116875
+  }, {
+    "name" : "물리 방어율",
+    "value" : 44.8
+  }, {
+    "name" : "마법 방어율",
+    "value" : 47.8
+  }, {
+    "name" : "힘",
+    "value" : 6394
+  }, {
+    "name" : "지능",
+    "value" : 3963
+  }, {
+    "name" : "체력",
+    "value" : 3940
+  }, {
+    "name" : "정신력",
+    "value" : 4027
+  }, {
+    "name" : "물리 공격",
+    "value" : 3837
+  }, {
+    "name" : "마법 공격",
+    "value" : 2969
+  }, {
+    "name" : "물리 크리티컬",
+    "value" : 99.5
+  }, {
+    "name" : "마법 크리티컬",
+    "value" : 72.5
+  }, {
+    "name" : "독립 공격",
+    "value" : 2644
+  }, {
+    "name" : "공격 속도",
+    "value" : 62.2
+  }, {
+    "name" : "캐스팅 속도",
+    "value" : 49.5
+  }, {
+    "name" : "이동 속도",
+    "value" : 66.2
+  }, {
+    "name" : "모험가 명성",
+    "value" : 65666
+  }, {
+    "name" : "적중률",
+    "value" : 15.5
+  }, {
+    "name" : "회피율",
+    "value" : 30.5
+  }, {
+    "name" : "HP 회복량",
+    "value" : 1508
+  }, {
+    "name" : "MP 회복량",
+    "value" : 7647
+  }, {
+    "name" : "경직도",
+    "value" : 0
+  }, {
+    "name" : "히트리커버리",
+    "value" : 894
+  }, {
+    "name" : "화속성 강화",
+    "value" : 261
+  }, {
+    "name" : "화속성 저항",
+    "value" : 61
+  }, {
+    "name" : "수속성 강화",
+    "value" : 366
+  }, {
+    "name" : "수속성 저항",
+    "value" : 21
+  }, {
+    "name" : "명속성 강화",
+    "value" : 261
+  }, {
+    "name" : "명속성 저항",
+    "value" : 21
+  }, {
+    "name" : "암속성 강화",
+    "value" : 491
+  }, {
+    "name" : "암속성 저항",
+    "value" : 21
+  }, {
+    "name" : "물리 방어",
+    "value" : 81223
+  }, {
+    "name" : "마법 방어",
+    "value" : 91476
+  }, {
+    "name" : "공격력 증가",
+    "value" : 26270.6
+  }, {
+    "name" : "버프력",
+    "value" : 0
+  }, {
+    "name" : "공격력 증폭",
+    "value" : 56
+  }, {
+    "name" : "버프력 증폭",
+    "value" : 0
+  }, {
+    "name" : "최종 데미지 증가",
+    "value" : 16318.7
+  }, {
+    "name" : "쿨타임 감소",
+    "value" : 32
+  }, {
+    "name" : "쿨타임 회복속도",
+    "value" : 0
+  }, {
+    "name" : "최종 쿨타임 감소율",
+    "value" : 32
+  }, {
+    "name" : "데미지 증가",
+    "value" : 0
+  }, {
+    "name" : "크리티컬 데미지 증가",
+    "value" : 0
+  }, {
+    "name" : "추가 데미지 증가",
+    "value" : 0
+  }, {
+    "name" : "모든 공격력 증가",
+    "value" : 0
+  }, {
+    "name" : "물리 공격력 증가",
+    "value" : 0
+  }, {
+    "name" : "마법 공격력 증가",
+    "value" : 0
+  }, {
+    "name" : "독립 공격력 증가",
+    "value" : 0
+  }, {
+    "name" : "힘 증가",
+    "value" : 0
+  }, {
+    "name" : "지능 증가",
+    "value" : 0
+  }, {
+    "name" : "지속피해",
+    "value" : 0
+  }, {
+    "name" : "물리 피해 감소",
+    "value" : 0
+  }, {
+    "name" : "마법 피해 감소",
+    "value" : 0
+  }, {
+    "name" : "출혈 피해 전환",
+    "value" : 0
+  }, {
+    "name" : "중독 피해 전환",
+    "value" : 0
+  }, {
+    "name" : "화상 피해 전환",
+    "value" : 0
+  }, {
+    "name" : "감전 피해 전환",
+    "value" : 0
+  }, {
+    "name" : "출혈 내성",
+    "value" : 6.1
+  }, {
+    "name" : "중독 내성",
+    "value" : 9.1
+  }, {
+    "name" : "화상 내성",
+    "value" : 6.1
+  }, {
+    "name" : "감전 내성",
+    "value" : 7.1
+  }, {
+    "name" : "빙결 내성",
+    "value" : 46.1
+  }, {
+    "name" : "둔화 내성",
+    "value" : 6.1
+  }, {
+    "name" : "기절 내성",
+    "value" : 6.1
+  }, {
+    "name" : "저주 내성",
+    "value" : 6.1
+  }, {
+    "name" : "암흑 내성",
+    "value" : 6.1
+  }, {
+    "name" : "석화 내성",
+    "value" : 6.1
+  }, {
+    "name" : "수면 내성",
+    "value" : 4.6
+  }, {
+    "name" : "혼란 내성",
+    "value" : 6.1
+  }, {
+    "name" : "구속 내성",
+    "value" : 6.1
+  }, {
+    "name" : "화속성 피해",
+    "value" : 122.45
+  }, {
+    "name" : "수속성 피해",
+    "value" : 169.7
+  }, {
+    "name" : "명속성 피해",
+    "value" : 122.45
+  }, {
+    "name" : "암속성 피해",
+    "value" : 225.95
+  }, {
+    "name" : "출혈 피해",
+    "value" : 0
+  }, {
+    "name" : "중독 피해",
+    "value" : 0
+  }, {
+    "name" : "화상 피해",
+    "value" : 0
+  }, {
+    "name" : "감전 피해",
+    "value" : 0
+  } ]
+}
