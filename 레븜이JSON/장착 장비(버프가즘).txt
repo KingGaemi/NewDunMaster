@@ -1,0 +1,1034 @@
+{
+  "characterId" : "34066d5910d52fb46a5bb29be7fa468a",
+  "characterName" : "버프가즘",
+  "level" : 110,
+  "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+  "jobGrowId" : "37495b941da3b1661bc900e68ef3b2c6",
+  "jobName" : "프리스트(남)",
+  "jobGrowName" : "眞 크루세이더",
+  "adventureName" : "개미는갬갬",
+  "guildId" : "63d35e9ffce0a4a0bee65e3c9f1e3c66",
+  "guildName" : "뻐킹던전맨",
+  "equipment" : [ {
+    "slotId" : "WEAPON",
+    "slotName" : "무기",
+    "itemId" : "9310d3964ffbbc878e0abb7a7844bf45",
+    "itemName" : "土 : 따뜻한 봄날의 십자가",
+    "itemTypeId" : "4ffb6f14b86f5c818a925bf58022686e",
+    "itemType" : "무기",
+    "itemTypeDetailId" : "8312eb54a0609b14ad1cb4877af8a89d",
+    "itemTypeDetail" : "십자가",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "status" : [ {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 8,
+    "asrahanOption" : {
+      "options" : [ {
+        "name" : "견고한 땅의 성단",
+        "step" : 5,
+        "buff" : 817,
+        "explain" : "최종 데미지 4% 증가\n공격력 증가 +105.0%\n\n[사계의 축복]\n사계의 축복을 받아 자신을 강화하고 모든 파티원에게 50%의 효과를 가진 축복 적용\n- 동일 축복끼리 중복 적용 불가\n\n* 따뜻한 봄의 축복\n  - 최종 데미지 1% 증가\n* 활기찬 여름의 축복\n  - 10초마다 10초 동안 HP/MP 10% 회복",
+        "explainDetail" : "최종 데미지 4% 증가\n공격력 증가 +105.0%\n\n[사계의 축복]\n사계의 축복을 받아 자신을 강화하고 모든 파티원에게 50%의 효과를 가진 축복 적용\n- 동일 축복끼리 중복 적용 불가\n\n* 따뜻한 봄의 축복\n  - 최종 데미지 1% 증가\n* 활기찬 여름의 축복\n  - 10초마다 10초 동안 HP/MP 10% 회복"
+      }, {
+        "name" : "기억의 종착지",
+        "step" : 1,
+        "buff" : 190,
+        "explain" : "최종 데미지 1% 증가",
+        "explainDetail" : "최종 데미지 1% 증가"
+      } ]
+    },
+    "engraveName" : true
+  }, {
+    "slotId" : "TITLE",
+    "slotName" : "칭호",
+    "itemId" : "c89a01593a155a3cbaaf272084d8fb57",
+    "itemName" : "진정한 각성을 이룬 자",
+    "itemTypeId" : "e490f8cce6bacd43bef1e2f5e0c4943d",
+    "itemType" : "액세서리",
+    "itemTypeDetailId" : "691933a06ff114348a7db936fb0aec66",
+    "itemTypeDetail" : "칭호",
+    "itemAvailableLevel" : 1,
+    "itemRarity" : "레어",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 0,
+    "enchant" : {
+      "status" : [ {
+        "name" : "수속성강화",
+        "value" : 6
+      }, {
+        "name" : "힘",
+        "value" : 25
+      }, {
+        "name" : "지능",
+        "value" : 25
+      }, {
+        "name" : "체력",
+        "value" : 25
+      }, {
+        "name" : "정신력",
+        "value" : 25
+      } ]
+    },
+    "amplificationName" : null,
+    "refine" : 0
+  }, {
+    "slotId" : "JACKET",
+    "slotName" : "상의",
+    "itemId" : "f6eca8fe35c8fbf5032800d178e5e300",
+    "itemName" : "仙 : 쉐도우블랙 슈트",
+    "itemTypeId" : "b09752bfff1935188ea2735cd925a872",
+    "itemType" : "방어구",
+    "itemTypeDetailId" : "fd2e4e03a93fb8096fca4d2187fb39db",
+    "itemTypeDetail" : "상의",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "8d8981a94b8bdd4e3ffad5bc05042080",
+          "name" : "퍼페티어",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "2c9d9a36c8401bddff6cdb80fab8dc24",
+          "name" : "수호의 은총",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "78bd107acd474518b606be1e4fd38239",
+          "name" : "계시 : 아리아",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "0ed3148658fe37b3336ccb718dc0fdb0",
+          "name" : "센세이션",
+          "value" : 3
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "damage" : 1272.8,
+        "buff" : 2066,
+        "explain" : "공격 속도 +15%\n캐스팅 속도 +20%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해",
+        "explainDetail" : "공격 속도 +15%\n캐스팅 속도 +20%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해"
+      }, {
+        "explain" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5",
+        "explainDetail" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "9037932df635f5cc5a6fc7f036e0d569",
+      "itemName" : "우레 : 대지를 뒤덮는 암운"
+    },
+    "fixedOption" : {
+      "damage" : 2041.6,
+      "buff" : 7525,
+      "level" : 50,
+      "expRate" : 4.07,
+      "explain" : "공격력 증가 +510.4%\n최종 데미지 2% 증가\n스킬 쿨타임 회복 속도 +20% (각성기 제외)\n\n[저주받은 허수아비]\n[장비 옵션 조작키] 입력 시 저주를 내리는 허수아비 소환 (쿨타임 10초)\n- 영역 내 적에게 30초 동안 저주 상태 이상 부여\n- 저주 지속 시간 +3초\n\n공격 속도 +8%\n캐스팅 속도 +12%",
+      "explainDetail" : "공격력 증가 +510.4%\n최종 데미지 2% 증가\n스킬 쿨타임 회복 속도 +20% (각성기 제외)\n\n[저주받은 허수아비]\n[장비 옵션 조작키] 입력 시 저주를 내리는 허수아비 소환 (쿨타임 10초)\n- 영역 내 적에게 30초 동안 저주 상태 이상 부여\n- 저주 지속 시간 +3초\n\n공격 속도 +8%\n캐스팅 속도 +12%"
+    }
+  }, {
+    "slotId" : "SHOULDER",
+    "slotName" : "머리어깨",
+    "itemId" : "b8111db05ac98eb30e00acc2246f6de5",
+    "itemName" : "仙 : 숲속의 마녀 망토",
+    "itemTypeId" : "b09752bfff1935188ea2735cd925a872",
+    "itemType" : "방어구",
+    "itemTypeDetailId" : "a4e1213018d003906149dffd2a2029e8",
+    "itemTypeDetail" : "머리어깨",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "8d8981a94b8bdd4e3ffad5bc05042080",
+          "name" : "퍼페티어",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "2c9d9a36c8401bddff6cdb80fab8dc24",
+          "name" : "수호의 은총",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "78bd107acd474518b606be1e4fd38239",
+          "name" : "계시 : 아리아",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "0ed3148658fe37b3336ccb718dc0fdb0",
+          "name" : "센세이션",
+          "value" : 3
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "damage" : 1272.8,
+        "buff" : 2066,
+        "explain" : "물리/마법 피해 감소 +6%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해",
+        "explainDetail" : "물리/마법 피해 감소 +6%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해"
+      }, {
+        "explain" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5",
+        "explainDetail" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "2c786522e7909a0a3addd7aa129bcc41",
+      "itemName" : "우레 : 곤두서는 감각"
+    },
+    "customOption" : {
+      "damage" : 1814.8,
+      "buff" : 7768,
+      "level" : 50,
+      "expRate" : 0.27,
+      "options" : [ {
+        "explain" : "40Lv 스킬 공격력 20% 증가",
+        "explainDetail" : "40Lv 스킬 공격력 20% 증가",
+        "buffExplain" : "버퍼 최종 데미지 5% 증가"
+      }, {
+        "explain" : "30Lv 스킬 공격력 20% 증가",
+        "explainDetail" : "30Lv 스킬 공격력 20% 증가",
+        "buffExplain" : "버퍼 최종 데미지 5% 증가"
+      }, {
+        "explain" : "공격력 증가 +1077.5%\n무력화 게이지 감소량 +30%",
+        "explainDetail" : "공격력 증가 +1077.5%\n무력화 게이지 감소량 +30%",
+        "transfer" : true
+      }, {
+        "explain" : "공격력 증가 +510.4%\n석화 지속 시간 +3초",
+        "explainDetail" : "공격력 증가 +510.4%\n석화 지속 시간 +3초"
+      } ]
+    }
+  }, {
+    "slotId" : "PANTS",
+    "slotName" : "하의",
+    "itemId" : "ee06c8f906c79362c3b8214d4ccd6c78",
+    "itemName" : "仙 : 딥 다이버 팬츠",
+    "itemTypeId" : "b09752bfff1935188ea2735cd925a872",
+    "itemType" : "방어구",
+    "itemTypeDetailId" : "d944e7adc2b12b60036b0da689051147",
+    "itemTypeDetail" : "하의",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : "225d0e2b9e9a633cc6ca7b4eface66ae",
+    "setItemName" : "안개를 걷는 자 세트",
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "8d8981a94b8bdd4e3ffad5bc05042080",
+          "name" : "퍼페티어",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "2c9d9a36c8401bddff6cdb80fab8dc24",
+          "name" : "수호의 은총",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "78bd107acd474518b606be1e4fd38239",
+          "name" : "계시 : 아리아",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "0ed3148658fe37b3336ccb718dc0fdb0",
+          "name" : "센세이션",
+          "value" : 3
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "damage" : 1272.8,
+        "buff" : 2066,
+        "explain" : "HP/MP MAX +1,500\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해",
+        "explainDetail" : "HP/MP MAX +1,500\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해"
+      }, {
+        "explain" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5",
+        "explainDetail" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "a50ec36485ce4d6b1fc569cca0710113",
+      "itemName" : "우레 : 뒤따르는 고동"
+    },
+    "customOption" : {
+      "damage" : 1758,
+      "buff" : 7825,
+      "level" : 50,
+      "expRate" : 0.78,
+      "options" : [ {
+        "explain" : "중독 피해 +15%\n중독 내성 +10%",
+        "explainDetail" : "중독 피해 +15%\n중독 내성 +10%"
+      }, {
+        "explain" : "공격력 증가 +850.7%\n약점 무력화형 상태 이상, 홀딩 무력화 게이지 감소량 +200%",
+        "explainDetail" : "공격력 증가 +850.7%\n약점 무력화형 상태 이상, 홀딩 무력화 게이지 감소량 +200%"
+      }, {
+        "explain" : "물리/마법 크리티컬 히트 +7%\n모든 상태 이상 내성 -10%",
+        "explainDetail" : "물리/마법 크리티컬 히트 +7%\n모든 상태 이상 내성 -10%",
+        "buffExplain" : "버퍼 최종 데미지 5% 증가"
+      }, {
+        "explain" : "모든 속성 강화 +20",
+        "explainDetail" : "모든 속성 강화 +20",
+        "buffExplain" : "버퍼 최종 데미지 3% 증가"
+      } ]
+    },
+    "mistGear" : true
+  }, {
+    "slotId" : "SHOES",
+    "slotName" : "신발",
+    "itemId" : "82cf89d0f9ce1b09ca0c09d6f78d4176",
+    "itemName" : "仙 : 안개의 뜻을 따르는 자의 신발",
+    "itemTypeId" : "b09752bfff1935188ea2735cd925a872",
+    "itemType" : "방어구",
+    "itemTypeDetailId" : "48e9f8b4f2ba996e22e2d9f176c9c8fd",
+    "itemTypeDetail" : "신발",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "8d8981a94b8bdd4e3ffad5bc05042080",
+          "name" : "퍼페티어",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "2c9d9a36c8401bddff6cdb80fab8dc24",
+          "name" : "수호의 은총",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "78bd107acd474518b606be1e4fd38239",
+          "name" : "계시 : 아리아",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "0ed3148658fe37b3336ccb718dc0fdb0",
+          "name" : "센세이션",
+          "value" : 3
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "damage" : 1272.8,
+        "buff" : 2066,
+        "explain" : "이동 속도 +12%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해",
+        "explainDetail" : "이동 속도 +12%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해"
+      }, {
+        "explain" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5",
+        "explainDetail" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "64670f9c086ab784afb049fc0e5cbf23",
+      "itemName" : "우레 : 구름을 향한 발돋움"
+    },
+    "fixedOption" : {
+      "damage" : 2297,
+      "buff" : 7364,
+      "level" : 48,
+      "expRate" : 50.79,
+      "explain" : "최종 데미지 13% 증가\n홀딩 무력화 게이지 감소량 +100%\n\n[약점 공략]\n무력화 게이지량이 90% 이하인 적에게 부여 시도하는 모든 무력화형 상태 이상을 약점으로 적용\n\n이동 속도 +8%\n적중률 +10%",
+      "explainDetail" : "최종 데미지 13% 증가\n홀딩 무력화 게이지 감소량 +100%\n\n[약점 공략]\n무력화 게이지량이 90% 이하인 적에게 부여 시도하는 모든 무력화형 상태 이상을 약점으로 적용\n\n이동 속도 +8%\n적중률 +10%"
+    }
+  }, {
+    "slotId" : "WAIST",
+    "slotName" : "벨트",
+    "itemId" : "a72da004ca7595c044dc000d00aeedf2",
+    "itemName" : "仙 : 블루 파이렛 벨트",
+    "itemTypeId" : "b09752bfff1935188ea2735cd925a872",
+    "itemType" : "방어구",
+    "itemTypeDetailId" : "05e3f1f7234913d35c9fc209dde01a6d",
+    "itemTypeDetail" : "벨트",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : "225d0e2b9e9a633cc6ca7b4eface66ae",
+    "setItemName" : "안개를 걷는 자 세트",
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "0dbdeaf846356f8b9380f8fbb8e97377",
+          "name" : "소악마",
+          "value" : 2
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "4f2e001e9a19eb7bae50ad1840dfb329",
+          "name" : "신념의 오라",
+          "value" : 2
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "1dad88963abdc96b091fcab185a8820d",
+          "name" : "신실한 열정",
+          "value" : 2
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "de3fea2d65c597f4d55c70a02b97fc79",
+          "name" : "유명세",
+          "value" : 2
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      }, {
+        "name" : "물리 크리티컬 히트",
+        "value" : "7%"
+      }, {
+        "name" : "마법 크리티컬 히트",
+        "value" : "7%"
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "damage" : 1272.8,
+        "buff" : 2066,
+        "explain" : "물리/마법 크리티컬 히트 +10%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해",
+        "explainDetail" : "물리/마법 크리티컬 히트 +10%\n공격 시 한 명의 적에게 우레 강타 시전 (쿨타임 3초)\n- 총 공격력 증가의 1,500%만큼 피해"
+      }, {
+        "explain" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5",
+        "explainDetail" : "[성난 번개 구름]\n공격 시 최대 4명의 적을 공격하는 성난 번개 구름 소환, 장착한 우레 장비 개수(2/3/5)에 따라 효과 적용\n- 성난 번개 구름 소환 쿨타임 : 7.5초/5초/3초\n - 총 공격력 증가의 1,500%만큼 피해, 무력화 게이지량 -5"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "10e021b102c7d24e0fb75a7fd1e2cbd7",
+      "itemName" : "우레 : 하늘에 새겨진 흉터"
+    },
+    "customOption" : {
+      "damage" : 1020.8,
+      "buff" : 7826,
+      "level" : 50,
+      "expRate" : 47.05,
+      "options" : [ {
+        "explain" : "출혈 피해 +15%\n[폭발 약속 - 출혈]\n출혈 부여 시 출혈 피해 폭발\n- 전환 옵션에 의한 부여 제외",
+        "explainDetail" : "출혈 피해 +15%\n[폭발 약속 - 출혈]\n출혈 부여 시 출혈 피해 폭발\n- 전환 옵션에 의한 부여 제외"
+      }, {
+        "explain" : "감전 피해 +15%\n[폭발 약속 - 감전]\n감전 부여 시 감전 피해 폭발\n- 전환 옵션에 의한 부여 제외",
+        "explainDetail" : "감전 피해 +15%\n[폭발 약속 - 감전]\n감전 부여 시 감전 피해 폭발\n- 전환 옵션에 의한 부여 제외"
+      }, {
+        "explain" : "스킬 범위 15% 증가",
+        "explainDetail" : "스킬 범위 15% 증가"
+      }, {
+        "explain" : "스킬 쿨타임 회복 속도 +15% (각성기 제외)",
+        "explainDetail" : "스킬 쿨타임 회복 속도 +15% (각성기 제외)"
+      } ]
+    },
+    "mistGear" : true
+  }, {
+    "slotId" : "AMULET",
+    "slotName" : "목걸이",
+    "itemId" : "5f3081f652962b72f39eba99dfbd6ace",
+    "itemName" : "仙 : 숲속의 마녀 목걸이",
+    "itemTypeId" : "e490f8cce6bacd43bef1e2f5e0c4943d",
+    "itemType" : "액세서리",
+    "itemTypeDetailId" : "390e3966118b0c466ce9f8eae45e1629",
+    "itemTypeDetail" : "목걸이",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "status" : [ {
+        "name" : "힘",
+        "value" : 90
+      }, {
+        "name" : "지능",
+        "value" : 90
+      }, {
+        "name" : "체력",
+        "value" : 90
+      }, {
+        "name" : "정신력",
+        "value" : 90
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "damage" : 500,
+        "buff" : 3000,
+        "explain" : "스킬 쿨타임 15% 감소 (각성기 제외)\n\n캐스팅 시 8% 확률로 자신에게 Lv10 신성한 빛 시전",
+        "explainDetail" : "스킬 쿨타임 15% 감소 (각성기 제외)\n\n캐스팅 시 8% 확률로 자신에게 Lv10 신성한 빛 시전"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "a787c880f6ad2698ebb1320c7c0a8e0e",
+      "itemName" : "뒤집힌 기억"
+    },
+    "customOption" : {
+      "damage" : 1871.5,
+      "buff" : 7904,
+      "level" : 50,
+      "expRate" : 76.29,
+      "options" : [ {
+        "explain" : "이동 속도 +40%",
+        "explainDetail" : "이동 속도 +40%",
+        "buffExplain" : "버퍼 최종 데미지 4% 증가"
+      }, {
+        "explain" : "모든 속도 +10%\n중독 내성 +40%",
+        "explainDetail" : "모든 속도 +10%\n중독 내성 +40%",
+        "buffExplain" : "버퍼 최종 데미지 4% 증가"
+      }, {
+        "explain" : "45Lv 스킬 쿨타임 회복 속도 +15%",
+        "explainDetail" : "45Lv 스킬 쿨타임 회복 속도 +15%",
+        "buffExplain" : "버퍼 최종 데미지 4% 증가"
+      }, {
+        "explain" : "상태 이상 지속 시간 +20%\n공격 시 적에게 10초 동안 출혈/중독/화상/감전 상태 이상 중 1개 부여 (쿨타임 2초)",
+        "explainDetail" : "상태 이상 지속 시간 +20%\n공격 시 적에게 10초 동안 출혈/중독/화상/감전 상태 이상 중 1개 부여 (쿨타임 2초)",
+        "buffExplain" : "버퍼 최종 데미지 4% 증가"
+      } ]
+    },
+    "refinedMistGear" : true
+  }, {
+    "slotId" : "WRIST",
+    "slotName" : "팔찌",
+    "itemId" : "62e0128100d4c2671637d06798089054",
+    "itemName" : "仙 : 블루 파이렛 암릿",
+    "itemTypeId" : "e490f8cce6bacd43bef1e2f5e0c4943d",
+    "itemType" : "액세서리",
+    "itemTypeDetailId" : "80bddf423629c28c7b4459c328fdffaf",
+    "itemTypeDetail" : "팔찌",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "status" : [ {
+        "name" : "힘",
+        "value" : 90
+      }, {
+        "name" : "지능",
+        "value" : 90
+      }, {
+        "name" : "체력",
+        "value" : 90
+      }, {
+        "name" : "정신력",
+        "value" : 90
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "buff" : 3000,
+        "explain" : "최종 데미지 9% 증가\n\n스킬 MP 소모량 -30%\n\n공격 시 5% 확률로 30초 동안 '기록된 신수' 소환 (쿨타임 30초)\n- 총 공격력 증가의 600%만큼 피해",
+        "explainDetail" : "최종 데미지 9% 증가\n\n스킬 MP 소모량 -30%\n\n공격 시 5% 확률로 30초 동안 '기록된 신수' 소환 (쿨타임 30초)\n- 총 공격력 증가의 600%만큼 피해"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "dedbcb9684579c9e99d228a9f0d165d5",
+      "itemName" : "지배자의 위엄"
+    },
+    "customOption" : {
+      "damage" : 1644.6,
+      "buff" : 7767,
+      "level" : 50,
+      "expRate" : 0.08,
+      "options" : [ {
+        "explain" : "모든 속성 강화 +20",
+        "explainDetail" : "모든 속성 강화 +20",
+        "buffExplain" : "버퍼 최종 데미지 3% 증가"
+      }, {
+        "explain" : "스킬 쿨타임 10% 감소 (각성기 제외)",
+        "explainDetail" : "스킬 쿨타임 10% 감소 (각성기 제외)"
+      }, {
+        "explain" : "최종 데미지 2% 증가\n식물 타입의 적 공격 시 최종 데미지 5% 증가",
+        "explainDetail" : "최종 데미지 2% 증가\n식물 타입의 적 공격 시 최종 데미지 5% 증가"
+      }, {
+        "explain" : "최종 데미지 5% 증가",
+        "explainDetail" : "최종 데미지 5% 증가",
+        "transfer" : true
+      } ]
+    }
+  }, {
+    "slotId" : "RING",
+    "slotName" : "반지",
+    "itemId" : "f7ace0123fac1871ee1c1969f1c18121",
+    "itemName" : "仙 : 숲속의 마녀 반지",
+    "itemTypeId" : "e490f8cce6bacd43bef1e2f5e0c4943d",
+    "itemType" : "액세서리",
+    "itemTypeDetailId" : "b04c7fb9b29b27b91a0a9e5a1822bc8f",
+    "itemTypeDetail" : "반지",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "status" : [ {
+        "name" : "힘",
+        "value" : 90
+      }, {
+        "name" : "지능",
+        "value" : 90
+      }, {
+        "name" : "체력",
+        "value" : 90
+      }, {
+        "name" : "정신력",
+        "value" : 90
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "buff" : 3000,
+        "explain" : "스킬 쿨타임 18% 감소 (각성기 제외)\n\n모든 속성 저항 +5",
+        "explainDetail" : "스킬 쿨타임 18% 감소 (각성기 제외)\n\n모든 속성 저항 +5"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "ff791742c08a4589461ddaa319589fd5",
+      "itemName" : "세계의 경계"
+    },
+    "customOption" : {
+      "damage" : 1984.9,
+      "buff" : 7689,
+      "level" : 50,
+      "expRate" : 0.06,
+      "options" : [ {
+        "explain" : "모든 속성 강화 +20",
+        "explainDetail" : "모든 속성 강화 +20",
+        "buffExplain" : "버퍼 최종 데미지 3% 증가"
+      }, {
+        "explain" : "공격력 증가 +1077.5%\n무력화 게이지 감소량 +10%",
+        "explainDetail" : "공격력 증가 +1077.5%\n무력화 게이지 감소량 +10%"
+      }, {
+        "explain" : "공격 속도 +20%\n캐스팅 속도 +30%",
+        "explainDetail" : "공격 속도 +20%\n캐스팅 속도 +30%",
+        "buffExplain" : "버퍼 최종 데미지 3% 증가"
+      }, {
+        "explain" : "가장 높은 상태 이상 내성 수치가 50% 이상일 때 스킬 쿨타임 회복 속도 +30% (각성기 제외)\n빙결 내성 +40%",
+        "explainDetail" : "가장 높은 상태 이상 내성 수치가 50% 이상일 때 스킬 쿨타임 회복 속도 +30% (각성기 제외)\n빙결 내성 +40%",
+        "transfer" : true
+      } ]
+    }
+  }, {
+    "slotId" : "SUPPORT",
+    "slotName" : "보조장비",
+    "itemId" : "92e6ea336ddb934e622b38db20dfb42b",
+    "itemName" : "仙 : 딥 다이버 오리발",
+    "itemTypeId" : "87ff665868ffd50f8aef7948548439bd",
+    "itemType" : "추가장비",
+    "itemTypeDetailId" : "2fef5d81b7f59f0c75241890a8d941c9",
+    "itemTypeDetail" : "보조장비",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : null,
+    "setItemName" : null,
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "8d8981a94b8bdd4e3ffad5bc05042080",
+          "name" : "퍼페티어",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "2c9d9a36c8401bddff6cdb80fab8dc24",
+          "name" : "수호의 은총",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "78bd107acd474518b606be1e4fd38239",
+          "name" : "계시 : 아리아",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "0ed3148658fe37b3336ccb718dc0fdb0",
+          "name" : "센세이션",
+          "value" : 3
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "buff" : 3000,
+        "explain" : "최종 데미지 10% 증가\n\n스킬 범위 7% 증가\nHP MAX +5%",
+        "explainDetail" : "최종 데미지 10% 증가\n\n스킬 범위 7% 증가\nHP MAX +5%"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "64ab0451e9b8e4e5b37450da182b4e25",
+      "itemName" : "사신의 함정"
+    },
+    "customOption" : {
+      "damage" : 1531.2,
+      "buff" : 7651,
+      "level" : 50,
+      "expRate" : 1.69,
+      "options" : [ {
+        "explain" : "공격력 증가 +1020.8%\n무력화 게이지 감소량 +10%\n기절 지속 시간 +1초",
+        "explainDetail" : "공격력 증가 +1020.8%\n무력화 게이지 감소량 +10%\n기절 지속 시간 +1초"
+      }, {
+        "explain" : "공격력 증가 +1020.8%\n무력화 게이지 감소량 +10%\n저주 지속 시간 +1초",
+        "explainDetail" : "공격력 증가 +1020.8%\n무력화 게이지 감소량 +10%\n저주 지속 시간 +1초",
+        "transfer" : true
+      }, {
+        "explain" : "공격 시 적에게 10초 동안 중독 상태 이상 부여 (쿨타임 3초)",
+        "explainDetail" : "공격 시 적에게 10초 동안 중독 상태 이상 부여 (쿨타임 3초)"
+      }, {
+        "explain" : "중독 피해 +5%",
+        "explainDetail" : "중독 피해 +5%"
+      } ]
+    }
+  }, {
+    "slotId" : "MAGIC_STON",
+    "slotName" : "마법석",
+    "itemId" : "5b36564dd64e8a257fb2f10f5ac4cf74",
+    "itemName" : "仙 : 블루 파이렛 쥬얼",
+    "itemTypeId" : "87ff665868ffd50f8aef7948548439bd",
+    "itemType" : "추가장비",
+    "itemTypeDetailId" : "fe5f3db78175f5a3196385c688d29681",
+    "itemTypeDetail" : "마법석",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : "225d0e2b9e9a633cc6ca7b4eface66ae",
+    "setItemName" : "안개를 걷는 자 세트",
+    "reinforce" : 12,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "reinforceSkill" : [ {
+        "jobId" : "3909d0b188e9c95311399f776e331da5",
+        "jobName" : "마법사(여)",
+        "skills" : [ {
+          "skillId" : "8d8981a94b8bdd4e3ffad5bc05042080",
+          "name" : "퍼페티어",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "f6a4ad30555b99b499c07835f87ce522",
+        "jobName" : "프리스트(남)",
+        "skills" : [ {
+          "skillId" : "2c9d9a36c8401bddff6cdb80fab8dc24",
+          "name" : "수호의 은총",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "0c1b401bb09241570d364420b3ba3fd7",
+        "jobName" : "프리스트(여)",
+        "skills" : [ {
+          "skillId" : "78bd107acd474518b606be1e4fd38239",
+          "name" : "계시 : 아리아",
+          "value" : 3
+        } ]
+      }, {
+        "jobId" : "b9cb48777665de22c006fabaf9a560b3",
+        "jobName" : "아처",
+        "skills" : [ {
+          "skillId" : "0ed3148658fe37b3336ccb718dc0fdb0",
+          "name" : "센세이션",
+          "value" : 3
+        } ]
+      } ],
+      "status" : [ {
+        "name" : "힘",
+        "value" : 100
+      }, {
+        "name" : "지능",
+        "value" : 100
+      }, {
+        "name" : "체력",
+        "value" : 100
+      }, {
+        "name" : "정신력",
+        "value" : 100
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "buff" : 3000,
+        "explain" : "최종 데미지 10% 증가\n\n火(화), 水(수), 明(명), 暗(암) 공격 속성",
+        "explainDetail" : "최종 데미지 10% 증가\n\n火(화), 水(수), 明(명), 暗(암) 공격 속성"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "3e57e786cca74683a7e92fccf6f7f741",
+      "itemName" : "영광의 재림"
+    },
+    "customOption" : {
+      "damage" : 1814.8,
+      "buff" : 7592,
+      "level" : 50,
+      "expRate" : 5.05,
+      "options" : [ {
+        "explain" : "무력화형 상태 이상, 홀딩 무력화 게이지 감소량 +100%",
+        "explainDetail" : "무력화형 상태 이상, 홀딩 무력화 게이지 감소량 +100%"
+      }, {
+        "explain" : "공격 시 적에게 10초 동안 기절 상태 이상 부여 (쿨타임 3초)",
+        "explainDetail" : "공격 시 적에게 10초 동안 기절 상태 이상 부여 (쿨타임 3초)"
+      }, {
+        "explain" : "공격 시 적에게 10초 동안 빙결 상태 이상 부여 (쿨타임 3초)",
+        "explainDetail" : "공격 시 적에게 10초 동안 빙결 상태 이상 부여 (쿨타임 3초)"
+      }, {
+        "explain" : "공격 시 적에게 10초 동안 석화 상태 이상 부여 (쿨타임 3초)",
+        "explainDetail" : "공격 시 적에게 10초 동안 석화 상태 이상 부여 (쿨타임 3초)"
+      } ]
+    },
+    "mistGear" : true
+  }, {
+    "slotId" : "EARRING",
+    "slotName" : "귀걸이",
+    "itemId" : "fe28f9351a64274683a95f020514800e",
+    "itemName" : "仙 : 시각의 관점",
+    "itemTypeId" : "87ff665868ffd50f8aef7948548439bd",
+    "itemType" : "추가장비",
+    "itemTypeDetailId" : "601834074c49bb0e48cb65a75a8667bc",
+    "itemTypeDetail" : "귀걸이",
+    "itemAvailableLevel" : 110,
+    "itemRarity" : "에픽",
+    "setItemId" : "0a5f6d34185c65acaf5fe5868d161515",
+    "setItemName" : "숭고한 구원자의 길 세트",
+    "reinforce" : 11,
+    "itemGradeName" : "최상급",
+    "enchant" : {
+      "status" : [ {
+        "name" : "힘",
+        "value" : 175
+      }, {
+        "name" : "지능",
+        "value" : 175
+      }, {
+        "name" : "체력",
+        "value" : 175
+      }, {
+        "name" : "정신력",
+        "value" : 175
+      } ]
+    },
+    "amplificationName" : "차원의 정신력",
+    "refine" : 0,
+    "fusionOption" : {
+      "options" : [ {
+        "buff" : 3000,
+        "explain" : "최종 데미지 10% 증가\n\n스킬 범위 7% 증가\n물리/마법 방어력 +10,000",
+        "explainDetail" : "최종 데미지 10% 증가\n\n스킬 범위 7% 증가\n물리/마법 방어력 +10,000"
+      } ]
+    },
+    "upgradeInfo" : {
+      "itemId" : "565a1d18209279337579c5796a19aedf",
+      "itemName" : "지나간 과오"
+    },
+    "fixedOption" : {
+      "damage" : 1644,
+      "buff" : 5878,
+      "level" : 40,
+      "expRate" : 0,
+      "explain" : "[화이트 매지션]\n해당 장비에 부여된 마법 부여 효과 100% 증가\n- 제외 : 스킬 레벨 증가 효과, 모험가 명성 증가 효과\n\n공격 시 MP 1,500 회복 (쿨타임 1초)\n\n물리/마법 피해 감소 +10%\nHP 1분당 460.2 회복\nMP 1분당 348 회복",
+      "explainDetail" : "[화이트 매지션]\n해당 장비에 부여된 마법 부여 효과 100% 증가\n- 제외 : 스킬 레벨 증가 효과, 모험가 명성 증가 효과\n\n공격 시 MP 1,500 회복 (쿨타임 1초)\n\n물리/마법 피해 감소 +10%\nHP 1분당 460.2 회복\nMP 1분당 348 회복"
+    }
+  } ],
+  "setItemInfo" : [ {
+    "setItemId" : "225d0e2b9e9a633cc6ca7b4eface66ae",
+    "setItemName" : "안개를 걷는 자 세트",
+    "slotInfo" : [ {
+      "slotId" : "PANTS",
+      "slotName" : "하의",
+      "itemRarity" : "에픽"
+    }, {
+      "slotId" : "WAIST",
+      "slotName" : "벨트",
+      "itemRarity" : "에픽"
+    }, {
+      "slotId" : "AMULET",
+      "slotName" : "목걸이",
+      "itemRarity" : "에픽"
+    }, {
+      "slotId" : "MAGIC_STON",
+      "slotName" : "마법석",
+      "itemRarity" : "에픽"
+    } ],
+    "activeSetNo" : 4
+  } ]
+}

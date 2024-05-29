@@ -48,8 +48,8 @@ function processJson(json) {
 //     deal: int
 //     buff: int
     
-    function sendData() {
-      const url = "/character/create";
+function sendCharacter() {
+      const url = "/saveCharacter";
       const bodyData = {
         "server_id": serverId,
         "character_id": characterId,
@@ -79,7 +79,7 @@ function processJson(json) {
 }
 
 function sendStatus(){
-  const url = "/getStatus/"+serverId+"/"+characterId;
+  const url = "/saveStatus/"+serverId+"/"+characterId;
 
 
   fetch(url) // 데이터를 가져올 URL
@@ -102,7 +102,74 @@ function sendStatus(){
   });
 }
 
+function sendAvatar(){
+  const url = "/saveAvatar/"+serverId+"/"+characterId;
 
+  fetch(url) // 데이터를 가져올 URL
+  .then(response => {
+    console.log("response");
+    console.log(response);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json(); // JSON 데이터 파싱 (필요에 따라 다른 형식으로 변경 가능)
+  })
+  .then(data => {
+    // 받아온 데이터 활용
+    console.log("data");
+    console.log(data);
+  })
+  .catch(error => {
+    // 에러 처리 (실패 시)
+    console.error('Fetch Error:', error);
+  });
+}
+
+function sendTrait(){
+  const url = "/saveTrait/"+serverId+"/"+characterId;
+
+  fetch(url) // 데이터를 가져올 URL
+  .then(response => {
+    console.log("response");
+    console.log(response);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json(); // JSON 데이터 파싱 (필요에 따라 다른 형식으로 변경 가능)
+  })
+  .then(data => {
+    // 받아온 데이터 활용
+    console.log("data");
+    console.log(data);
+  })
+  .catch(error => {
+    // 에러 처리 (실패 시)
+    console.error('Fetch Error:', error);
+  });
+}
+
+function sendSkill(){
+  const url = "/saveSkill/"+serverId+"/"+characterId;
+
+  fetch(url) // 데이터를 가져올 URL
+  .then(response => {
+    console.log("response");
+    console.log(response);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json(); // JSON 데이터 파싱 (필요에 따라 다른 형식으로 변경 가능)
+  })
+  .then(data => {
+    // 받아온 데이터 활용
+    console.log("data");
+    console.log(data);
+  })
+  .catch(error => {
+    // 에러 처리 (실패 시)
+    console.error('Fetch Error:', error);
+  });
+}
 
 
 
@@ -144,27 +211,16 @@ function generateEquipmentsTooltip(equipmentsJSON) {
   }
 }
 
-const infoContents = document.querySelectorAll('input[name="infoRadio"]');
-const contents = document.querySelectorAll('.content');
 
-for (const index in infoContents) {
-  const option = infoContents[index];
-  if (option.addEventListener) { // Ensure the element is an EventTarget before adding a listener
-    option.addEventListener('change', function() {
-      contents.forEach(function(content) {
-        content.style.display = 'none';
-      });
-      document.getElementById('content' + (parseInt(index) + 1)).style.display = 'block';
-    });
-  }
-}
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
+// 
 
-  const url = `/info/${characterId}/${serverId}`;
 
-  fetch(url)
+  fetch(`/getEquipments/${serverId}/${characterId}`)
       .then(response => response.json())
       .then(data => {
           generateEquipmentsTooltip(data);
@@ -172,6 +228,21 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => {
           console.error('Error fetching equipments data:', error);
       });
+
+  
+  fetch('/getAvatar')
+      .then(response => response.json())
+      .then(data => {
+          console.log(data);
+          if (data) {
+              let avatar = data.avatar;
+          }
+      }
+      )
+      .catch(error => {
+          console.error('Error fetching avatar data:', error);
+      });
+
 
 });
 

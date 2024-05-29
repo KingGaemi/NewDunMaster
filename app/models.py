@@ -1,3 +1,4 @@
+
 from pydantic import BaseModel, Field, create_model
 from pydantic.networks import HttpUrl
 
@@ -61,11 +62,109 @@ class Status(Base):
     __tablename__ = 'status'
 
     id = Column(Integer, primary_key=True, index=True)
-    status = Column(JSON)
     characters_id = Column(Integer, ForeignKey('characters.id'))
+    status = Column(JSON)
+    
     
 
+class Equipments(Base):
+    __tablename__ = 'equipments'
+
+    id = Column(Integer, primary_key=True, index=True)
+    characters_id = Column(Integer, ForeignKey('characters.id'))
+    weapon_id = Column(Integer, ForeignKey('weapons.id'))
+    title_id = Column(Integer)
+    jacket_id = Column(Integer)
+    shoulder_id = Column(Integer)
+    pants_id = Column(Integer)
+    belt_id = Column(Integer)
+    shoes_id = Column(Integer)
+    neck_id = Column(Integer)
+    bracelet_id = Column(Integer)
+    ring_id = Column(Integer)
+    sub_weapon_id = Column(Integer)
+    earing_id = Column(Integer)
+    magic_stone_id = Column(Integer)
+
     
+
+class Weapons(Base):
+    __tablename__ = 'weapons'
+
+    id = Column(Integer, primary_key=True, index=True)
+    item_id = Column(String(50))
+    enchant = Column(Integer, ForeignKey('enchantments.id'))
+
+
+class Enchantments(Base):
+    __tablename__ = 'enchantments'
+
+    id = Column(Integer, primary_key=True, index=True)
+    enchant_name = Column(String(50))
+    enchant_value = Column(Integer)
+    reinforce_skill = Column(String(50))
+    reinforce_value = Column(Integer)
+    # card_name = Column(String(50))
+    # card_upgrade = Column(Integer)
+    # card_id = Column(Integer, Foreign_key='cards.id')
+
+class Avatars(Base):
+    __tablename__ = 'avatars'
+
+    id = Column(Integer, primary_key=True, index=True)
+    characters_id = Column(Integer, ForeignKey('characters.id'))
+
+    avatar_JSON = Column(JSON)
+    
+    # head_id = Column(Integer)
+    # hear_id = Column(Integer)
+    # face_id = Column(Integer)
+    # chest_id = Column(Integer)
+    # top_id = Column(Integer)
+    # bottom_id = Column(Integer)
+    # waist_id = Column(Integer)
+    # boots_id = Column(Integer)
+    # skin_id = Column(Integer)
+    # aura_id = Column(Integer)
+    # weapon_skin_id = Column(Integer)
+
+class Traits(Base):
+
+    __tablename__ = 'traits'
+
+    id = Column(Integer, primary_key=True, index=True)
+    characters_id = Column(Integer, ForeignKey('characters.id'))
+
+    trait_JSON = Column(JSON)
+
+class Skills(Base):
+    
+    __tablename__ = 'skills'
+
+    id = Column(Integer, primary_key=True, index=True)
+    characters_id = Column(Integer, ForeignKey('characters.id'))
+
+    skill_JSON = Column(JSON)
+
+# class Cards(Base):
+#     __tablename__ = 'cards'
+
+#     id = Column(Integer, primary_key=True, index=True)
+#     card_name = Column(String(50))
+#     card_value = Column(Integer)
+#     card_upgrade = Column(Integer)
+#     card_id = Column(Integer, ForeignKey='cards.id')
+
+
+# class Stats(Base):
+#     __tablename__ = 'stats'
+
+#     id = Column(Integer, primary_key=True, index=True)
+#     strangth = Column(Integer)
+#     intelligence = Column(Integer)
+#     vitality = Column(Integer)
+#     mentalitiy = Column(Integer)
+
 
 
 
