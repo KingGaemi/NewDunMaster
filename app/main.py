@@ -344,6 +344,8 @@ async def save_skill(serverId: str, characterId: str):
     response = requests.get(url)
     skillJSON = response.json()
 
+
+
     db = SessionLocal()
 
     # Get Character id (1, 2, 3, ...)
