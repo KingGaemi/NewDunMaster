@@ -53,32 +53,46 @@ async def info(request: Request, characterId: str = Query(...), serverId: str = 
     equipmentUrl = f"https://api.neople.co.kr/df/servers/{serverId}/characters/{characterId}/equip/equipment?apikey={API_KEY}"
     response = requests.get(equipmentUrl)
     equipJSON = response.json()
-    simpleData = {equipJSON["characterId"], serverId}
+
+    # Get character fame
+    characterName = equipJSON["characterName"]
+    characterUrl = f"https://api.neople.co.kr/df/servers/{serverId}/characters?characterName={characterName}&apikey={API_KEY}"
+    response2 = requests.get(characterUrl) 
+    charJSON = response2.json()
+    fame = charJSON['rows'][0]['fame']
+
     
     if response.status_code == 200:
-        return templates.TemplateResponse("info.html", {"request": request, "equipmentsJSON": equipJSON, "simpleData": simpleData, "servers": data.servers, "serverId": serverId})
+        return templates.TemplateResponse("info.html", {"request": request, "equipmentsJSON": equipJSON, "servers": data.servers, "serverId": serverId, "fame" : fame})
     else:
         raise HTTPException(status_code=404, detail="No character data found")
     
 
 
 
-
-
-@app.get("/info/{character_id}/{server_id}",  response_class=HTMLResponse)
-async def get_equipments(characterId: str = Query(...), serverId: str = Query(...)):
-    equipmentUrl = f"https://api.neople.co.kr/df/servers/{serverId}/characters/{characterId}?apikey={API_KEY}"
+@app.get("/info/{characterId}/{serverId}")
+async def get_equipments_json(characterId: str, serverId: str):
+    equipmentUrl = f"https://api.neople.co.kr/df/servers/{serverId}/characters/{characterId}/equip/equipment?apikey={API_KEY}"
     response = requests.get(equipmentUrl)
-    equipmentsJSON = response.json()
-
-    return JSONResponse(content=equipmentsJSON)
-
+    equipJSON = response.json()
+    if response.status_code == 200:
+        return JSONResponse(content=equipJSON)  # JSONResponse 사용
+    else:
+        raise HTTPException(status_code=404, detail="No character data found")
+    
 
 
 @app.post("/users/create", status_code=status.HTTP_201_CREATED)
 async def create_user(user: models.UserBase, db : db_dependency):
+    existing_user = db.query(models.User).filter(models.User.charId == user.charId).first()  # 중복 체크
+    if existing_user:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="User with this name already exists"
+        )
+
     db_user = models.User(**user.dict())
     db.add(db_user)
     db.commit()
-    # db.refresh(db_user)
+    db.refresh(db_user)
     # return db_user

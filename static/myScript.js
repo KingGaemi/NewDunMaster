@@ -1,12 +1,15 @@
 // equipmentsJSON is defined in the HTML template
 
+// const characterId = '{{equipmentsJSON.characterId}}';
+// const characterName = '{{equipmentsJSON.characterName}}';
+// const serverId = '{{serverId}}';
+// const adventureName = '{{equipmentsJSON.adventureName}}';
+// const jobGrowName = '{{equipmentsJSON.jobGrowName}}';
+// const jobName = '{{equipmentsJSON.jobName}}';
+// const guildName = '{{equipmentsJSON.guildName}}';
+// const fame = '{{fame}}';
 
-fetch(`/info/${characterId}/${serverId}`)
-    .then(response => response.json())
-    .then(data => {
-        // 받아온 equipmentsJSON 데이터 (data) 처리
-        generateEquipmentsTooltip(data); 
-    });
+
 
 function getLastProperty(obj) {
   const keys = Object.keys(obj);
@@ -26,14 +29,37 @@ function processJson(json) {
   json = json.replace(/None/g, 'null');
   json = json.replace(/True/g, 'true');
   json = json.replace(/False/g, 'false');
+  console.log(json);
   return JSON.parse(json);
 }
 
-function generateEquipmentsTooltip() {
-  for (const index in equipmentsJSON.equipment) {
-    const equipment = equipmentsJSON.equipment[index];
-    const targetTooltip = document.getElementById('tooltip_' + (parseInt(index) + 1));
 
+function sendData() {
+  const url = "/users/create";
+  const bodyData = {"name": characterName , "charId": characterId,
+                    "serverId": serverId, "adventureName": adventureName,
+                    "jobGrowName": jobGrowName, "jobName": jobName,
+                    "guildName": guildName, "fame": fame}; // 원하는 body 데이터
+  console.log(bodyData);
+  fetch(url, {
+      method: 'POST', // 또는 'GET'
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(bodyData)
+  })
+  .then(response => {
+    console.log(response);
+  });
+}
+
+function generateEquipmentsTooltip(equipmentsJSON) {
+  for (const index in equipmentsJSON['equipment']) {
+    const equipment = equipmentsJSON['equipment'][index];
+    const targetTooltip = document.getElementById('tooltip_' + (parseInt(index) + 1));
+    console.log(equipment);
+    console.log(index);
+    console.log(targetTooltip);
     if (!targetTooltip) {
       continue; // 툴팁 요소가 없으면 다음 반복으로 넘어감
     }
@@ -61,6 +87,7 @@ function generateEquipmentsTooltip() {
     } else {
       targetTooltip.innerHTML += '<span>Default</span><span>Default</span>';
     }
+    console.log(targetTooltip.innerHTML);
   }
 }
 
@@ -79,7 +106,27 @@ for (const index in infoContents) {
   }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const characterId = urlParams.get('characterId');
+  const serverId = urlParams.get('serverId');
+
+
+  const url = `/info/${characterId}/${serverId}`;
+
+  fetch(url)
+      .then(response => response.json())
+      .then(data => {
+          generateEquipmentsTooltip(data);
+      })
+      .catch(error => {
+          console.error('Error fetching equipments data:', error);
+      });
+
+});
 
 
 
-window.addEventListener('load', generateEquipmentsTooltip); 
+
+
+
