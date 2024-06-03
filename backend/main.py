@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, status, Body, Depends , Query
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -7,9 +8,9 @@ from fastapi.responses import JSONResponse
 from typing import Annotated
 
 from websockets import serve
-from app import models, data
+from backend import models, data
 from pydantic import BaseModel
-from app.database import SessionLocal, engine
+from backend.database import SessionLocal, engine
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session , column_property, sessionmaker
@@ -18,9 +19,20 @@ from starlette.requests import Request
 import requests
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+origins = [
+    "http://localhost:3000",  # Next.js 개발 서버
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+templates = Jinja2Templates(directory="backend/templates")
 models.Base.metadata.create_all(bind=engine)
-app.mount("/static", StaticFiles(directory="static"), name="static")  # static 디렉토리 마운트
+app.mount("/static", StaticFiles(directory="backend/static"), name="static")  # static 디렉토리 마운트
 
 def get_db():
     db = SessionLocal()
@@ -343,8 +355,6 @@ async def save_skill(serverId: str, characterId: str):
     url = f"https://api.neople.co.kr/df/servers/{serverId}/characters/{characterId}/skill/style?apikey={API_KEY}"
     response = requests.get(url)
     skillJSON = response.json()
-
-
 
     db = SessionLocal()
 

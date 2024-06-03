@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field, create_model
 from pydantic.networks import HttpUrl
 
 from sqlalchemy import JSON, Column, Integer, String, Float, ForeignKey, Boolean, BigInteger
-from app.database import Base
+from backend.database import Base
 
 
 # def create_pydantic_model_from_json(data: dict, model_name: str = "DynamicModel") -> BaseModel:

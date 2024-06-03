@@ -48,7 +48,7 @@ function processJson(json) {
 //     deal: int
 //     buff: int
     
-function sendCharacter() {
+function saveCharacter() {
       const url = "/saveCharacter";
       const bodyData = {
         "server_id": serverId,
@@ -78,7 +78,7 @@ function sendCharacter() {
   });
 }
 
-function sendStatus(){
+function saveStatus(){
   const url = "/saveStatus/"+serverId+"/"+characterId;
 
 
@@ -102,7 +102,7 @@ function sendStatus(){
   });
 }
 
-function sendAvatar(){
+function saveAvatar(){
   const url = "/saveAvatar/"+serverId+"/"+characterId;
 
   fetch(url) // 데이터를 가져올 URL
@@ -125,7 +125,7 @@ function sendAvatar(){
   });
 }
 
-function sendTrait(){
+function saveTrait(){
   const url = "/saveTrait/"+serverId+"/"+characterId;
 
   fetch(url) // 데이터를 가져올 URL
@@ -148,7 +148,7 @@ function sendTrait(){
   });
 }
 
-function sendSkill(){
+function saveSkill(){
   const url = "/saveSkill/"+serverId+"/"+characterId;
 
   fetch(url) // 데이터를 가져올 URL
