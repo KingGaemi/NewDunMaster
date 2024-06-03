@@ -47,19 +47,23 @@
     <div>
 
         <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
-            <h1 class="h4 font-weight-bold mb-2">{{equipmentsJSON['characterName']}} ({{servers[equipmentsJSON['serverId']]}})</h1>
+            <h1 class="h4 font-weight-bold mb-2">{{equipmentsJSON['characterName']}} ({{serverName}})</h1>
             <p class="text-muted">
                 레벨: {{equipmentsJSON['level']}} | 
                 직업: {{equipmentsJSON['jobGrowName']}} | 
-                길드: {{equipmentsJSON['guildName']}}
+                길드: {{equipmentsJSON['guildName']}} |
                 명성: {{fame}}
             </p>
+            <p>모험단 : <a href="/search?adventureName={{adventureName}}">{{adventureName}}</a></p>
         </div>
 
         <div>
 
-                <button type="button" onclick="sendData()" class="btn btn-success">장비 저장</button>
-                <button type="button" onclick="sendStatus()" class="btn btn-success">스탯 저장</button>
+                <button type="button" onclick="saveCharacter()" class="btn btn-success">캐릭터 저장</button>
+                <button type="button" onclick="saveAvatar()" class="btn btn-success">아바타 저장</button>
+                <button type="button" onclick="saveStatus()" class="btn btn-success">능력치 저장</button>
+                <button type="button" onclick="saveTrait()" class="btn btn-success">장비 특성 저장</button>
+                <button type="button" onclick="saveSkill()" class="btn btn-success">스킬 저장</button>
 
         </div>
 
@@ -102,11 +106,54 @@
                     {% endfor %}
                 </div>
             </div>
+
+            <div id="content2" class="content" style="display:none">
+                <div class="d-flex flex-column">
+                    {% for avatar in equipmentsJSON['avatar'] %}
+                    <div>
+                        {{avatar["slotName"]}}
+                        <img src="https://img-api.neople.co.kr/df/items/{{avatar['itemId']}}" alt="Item Image">
+                        {{avatar["itemName"]}}
+                        {{avatar["optionAbility"]}}
+                    </div>
+                     {% endfor %}
+                </div>
+            </div>
+            <!-- content3 for status -->
+            <div id="content3" class="content" style="display:none">
+                <div class="d-flex flex-column">
+                    <div>
+                        <p>힘: {{status["힘"]}}</p>
+                        <p>지능: {{status["지능"]}}</p>
+                        <p>체력: {{status["체력"]}}</p>
+                        <p>정신력: {{status["정신력"]}}</p>
+
+                    </div>
+                </div>
+            </div>                
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        var contents = document.querySelectorAll('.content');
+        var infoContents = document.querySelectorAll('input[name=infoRadio]');
+
+        infoContents.forEach(function(option, index) {
+            option.addEventListener('change', function() {
+                // 모든 내용을 숨깁니다.
+                contents.forEach(function(content) {
+                    content.style.display = 'none';
+                });
+                // 선택된 라디오 버튼에 해당하는 내용을 보이도록 만듭니다.
+                document.getElementById('content' + (index + 1)).style.display = 'block';
+            });
+        });
+
+    </script>
 </body>
 </html>
